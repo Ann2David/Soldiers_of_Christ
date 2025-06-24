@@ -1,0 +1,301 @@
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(to bottom, #000000cc, #000000cc), url('hero-bg.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+}
+
+.hero p { 
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #CBA135;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a68128;
+  transform: scale(1.05);
+}
+
+/* ===== About Section ===== */
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* ===== Mentor Section ===== */
+.mentor-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.mentor-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.mentor-img:hover {
+  transform: scale(1.05);
+}
+
+.mentor-info {
+  max-width: 500px;
+}
+
+.mentor-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.mentor-info p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* ===== Benefits Section ===== */
+.benefits ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.benefits li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+.benefits li::before {
+  content: '✓';
+  color: #CBA135;
+  position: ;
+  left: 0;
+  font-weight: bold;
+}
+
+/* ===== Join Section ===== */
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .mentor-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+/* ===== Past Meetings ===== */
+.past-meetings {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.past-meetings h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.flyer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 30px auto 0;
+}
+
+.flyer-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.flyer-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== Upcoming Meeting ===== */
+.upcoming-meeting {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.upcoming-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+}
+
+.upcoming-container img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.meeting-details {
+  max-width: 500px;
+}
+
+.meeting-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.meeting-details p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .upcoming-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ===== Locations Section ===== */
+.locations {
+  padding: 60px 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.locations h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.locations p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.location-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.location-card {
+  background-color: #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .location-card {
+    width: 80%;
+  }
+}
