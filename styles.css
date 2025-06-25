@@ -40,10 +40,7 @@ section {
   letter-spacing: 1.5px;
 }
 
-.hero p { 
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
+
 
 .btn {
   background-color: #CBA135;
@@ -52,7 +49,7 @@ section {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
@@ -298,4 +295,33 @@ footer {
   .location-card {
     width: 80%;
   }
+}
+
+.meeting-info {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}  
+
+  .meeting-info h2 {
+    color: #CBA135;
+    margin-bottom: 10px;
+  }
+
+  .activities {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fefefe;
+  }
+.activities h2 {
+  margin-bottom: 20px;
+}
+.activities ul {
+  list-style: none;
+  padding: 1.1rem;
+}
+.activities li {
+  margin: 10px 0;
+  font-weight: 500;
+  
 }
