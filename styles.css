@@ -590,23 +590,83 @@ margin-top: 0.5rem;
   transform: scale(1.05);
 }
 
-.google-form {
-  background: linear-gradient(to buttom right, #0e0e0e, #1c1c1c );
-  padding: 40px 20px;
-  text-align: center;
-  color: #111;
-}
-
-.google-form h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
 .form-wrapper {
-  max-width: 800;
-  margin: 0 auto;
-  border: 2px solid #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f5f5f5;
 }
+
+form {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #444;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox-group, .radio-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: normal;
+    }
+
+    .form-note {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
