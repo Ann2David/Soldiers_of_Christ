@@ -49,7 +49,7 @@
   
   <section class="mentor">
     <div class="mentor-container">
-      <img src="mentor.jpeg" alt="Mentor Image" class="mentor-img" />
+      <img src="Prophetess.JPG" alt="Mentor Image" class="mentor-img" />
       <div class="mentor-info">
         <h2>Meet The Mentor</h2>
         <p>
@@ -174,9 +174,64 @@ She is committed to seeing women transformed by the power of God, equipped to th
   </div>
 
   <div class="form-group">
-    <label for="birthday">When is your birthday?</label>
-    <input type="date" id="birthday" name="Birthday" required>
+    <label for="dob">Date of Birth</label>
+    <div class="dob-selects">
+      <select name="Birth Month" required>
+        <option value="">Month</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+  
+      <select name="Birth Day" required>
+        <option value="">Day</option>
+        <!-- Days 1–31 -->
+        <!-- You can generate these quickly like this: -->
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+    </div>
   </div>
+
+
 
   <div class="form-group">
     <label for="email">Email Address</label>
@@ -194,12 +249,18 @@ She is committed to seeing women transformed by the power of God, equipped to th
   </div>
 
   <div class="form-group">
-    <label>How did you find us?</label>
+    <label>How did you find us / who invited you?</label>
     <div class="checkbox-group">
       <label><input type="checkbox" name="Found Us On" value="Instagram"> Instagram</label>
       <label><input type="checkbox" name="Found Us On" value="YouTube"> YouTube</label>
       <label><input type="checkbox" name="Found Us On" value="Facebook"> Facebook</label>
+      <label><input type="checkbox" name="Found US On" value="Through a friend" id="friendCheckbox">Through A Friend</label>
     </div>
+  </div>
+
+  <div class="form-group" id="friendNameGroup" style="display: none;">
+    <label for="friendName">Name of Friend</label>
+    <input type="text" id="friendName" name="Name of Friend">
   </div>
 
   <div class="form-group">
@@ -246,6 +307,23 @@ She is committed to seeing women transformed by the power of God, equipped to th
     </a>
     </div>
     </section>
+
+    <script>
+      const friendCheckbox = document.getElementById('friendCheckbox');
+      const friendNameGroup = document.getElementById('friendNameGroup');
+      const friendNameInput = document.getElementById('friendName');
+    
+      friendCheckbox.addEventListener('change', function () {
+        if (this.checked) {
+          friendNameGroup.style.display = 'block';
+          friendNameInput.setAttribute('required', 'required');
+        } else {
+          friendNameGroup.style.display = 'none';
+          friendNameInput.removeAttribute('required');
+        }
+      });
+    </script>
+
   <footer>
     <p>&copy; 2025 Soldiers of Christ | Powered by Purpose</p>
   </footer>
