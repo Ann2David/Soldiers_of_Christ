@@ -157,8 +157,15 @@ She is committed to seeing women transformed by the power of God, equipped to th
 </section>
 
     <section class="form-wrapper"> 
-      <form action="https://formspree.io/f/xkgbdjdv" method="POST">
+  <div class="form-intro">
   <h2>Mentorship Sign-Up</h2>
+  <p>Click the button below to fill out the form</p>
+      <button class="form-toggle-btn" onclick="toggleForm()">Fill the Form</button>
+  </div>
+
+  <div id="form-container" style="display: none; margin-top:30px ;">
+
+  <form action="https://formspree.io/f/xkgbdjdv" method="POST">
 
   <div class="form-group">
     <label for="fullName">Full Name</label>
@@ -293,6 +300,7 @@ She is committed to seeing women transformed by the power of God, equipped to th
 </form>
 
       </div>
+    </div>
   
 </section>
  
@@ -322,6 +330,17 @@ She is committed to seeing women transformed by the power of God, equipped to th
           friendNameInput.removeAttribute('required');
         }
       });
+
+      function toggleForm() {
+        const formContainer = document.getElementById('form-container');
+        const isHidden = formContainer.style.display === 'none' ;
+
+        formContainer.style.display = isHidden ? 'block' : 'none';
+
+        if (isHidden){
+          formContainer.scrollIntoView({ behavior: 'smooth'})
+        }
+      }
     </script>
 
   <footer>
