@@ -7,18 +7,26 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+  <script type="module" src="script.js" defer></script>
+  
 </head>
 <body>
     
-  <header class="hero">
+  <header class="slider-header">
+    <div class="slider">
+      <img src="aaron-burden-H8s0PF2rcQs-unsplash.jpg" class="slide active" alt="slide 1">
+      <img src="annie-spratt-i7mpyzGpbzE-unsplash.jpg" class="slide" alt="slide 2">
+      <img src="patrick-fore-b_SHPU5M3nk-unsplash.jpg" class="slide" alt="slide 3">
+      <div class="black-overlay"></div>
+    </div>
     <nav class="navbar">
       <a href="index.html"> Home</a>
       <a href="about.html">About The Harrisons</a>
-      <!--<a href="https://docs.google.com/forms/d/1RxtKMTb5ORD8xiZAmEbhwyY-pNkni-vLuqTZk9Oi8a0/viewform">Sign Up</a>-->
     </nav>
-    <img src="IMG_8429-removebg-preview.png" alt="Soldiers of Christ Logo" class="logo" />
-    <div class="hero-heading">
-    <h1>   
+   
+    <div class="header-text">
+    <h1>  
+       <img src="IMG_8429-removebg-preview.png" alt="Soldiers of Christ Logo" class="logo" /> 
       <span> • MENTORSHIP</span>
       <span> • WALKING IN PURPOSE</span>
       <span> • BUILDING A REAL RELATIONSHIP WITH JESUS</span>
@@ -27,7 +35,7 @@
   </div>
   </header>
 
-  <!-- ===== About Section ===== -->
+  
   <section class="about">
     <h2>About Us</h2>
     <p>
@@ -77,7 +85,7 @@ She is committed to seeing women transformed by the power of God, equipped to th
     </ul>
   </section>
 
-  <!-- ===== Upcoming Meeting Section ===== -->
+  
 <section class="upcoming-meeting">
   <h2>Upcoming Meeting</h2>
   <p>Don’t miss our next Meeting!</p>
@@ -91,7 +99,7 @@ She is committed to seeing women transformed by the power of God, equipped to th
   </div>
 </section>
 
-  <!-- ===== Past Meetings Section ===== -->
+  
 <section class="past-meetings">
   <h2>Past Meetings</h2>
   <p>Here are some highlights from our previous sessions:</p>
@@ -148,11 +156,6 @@ She is committed to seeing women transformed by the power of God, equipped to th
       <p class="contact">+44 079 313 32193</p>
     </div>
 
-    <div class="location-card">
-      🇩🇪 <strong>Germany</strong>
-      <p class="contact">+49 1767 0845323</p>
-    </div>
-
   </div>
 </section>
 
@@ -201,8 +204,7 @@ She is committed to seeing women transformed by the power of God, equipped to th
   
       <select name="Birth Day" required>
         <option value="">Day</option>
-        <!-- Days 1–31 -->
-        <!-- You can generate these quickly like this: -->
+    
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -341,6 +343,24 @@ She is committed to seeing women transformed by the power of God, equipped to th
           formContainer.scrollIntoView({ behavior: 'smooth'})
         }
       }
+
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) slide.classList.add("active");
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 5000); 
+
     </script>
 
   <footer>
